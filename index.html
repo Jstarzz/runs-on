@@ -3,122 +3,115 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="author" content="Josiah Davis">
+<meta name="description" content="Josiah Davis — AI systems, infrastructure, developer tooling, and selected engineering work from St. Kitts.">
+<link rel="canonical" href="https://josiah.runs-on.dev/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Josiah Davis — Projects">
+<meta property="og:description" content="AI systems, infrastructure, developer tooling, and selected engineering work.">
+<meta property="og:url" content="https://josiah.runs-on.dev/">
 <title>Josiah Davis — Projects</title>
 </head>
 <body>
 
 <header>
 <h1>Josiah Davis</h1>
-<p>Projects and selected contributions.</p>
+<p>I build AI systems, infrastructure, developer tools, and occasionally hardware from St. Kitts.</p>
+<nav aria-label="Primary">
+<a href="#sargasso">Sargasso</a> ·
+<a href="#projects">Projects</a> ·
+<a href="#contributions">Contributions</a> ·
+<a href="https://github.com/Jstarzz">GitHub</a> ·
+<a href="https://itsjosiahdavis.dev">Main site</a>
+</nav>
 </header>
 
 <hr>
 
 <main>
 
-<article>
-<h1>SARGASSO</h1>
-<p><strong>Role:</strong> Founder / Creator &nbsp;|&nbsp; <strong>Status:</strong> Active development &nbsp;|&nbsp; <strong>Flagship project</strong></p>
+<section id="sargasso">
+<h2>Sargasso</h2>
+<p><strong>Founder / creator · Active development</strong></p>
 
 <p>
 Sargasso is an AI-powered sargassum monitoring and forecasting project being
-developed in St. Kitts and Nevis. It combines satellite-based detection with
-environmental and oceanographic data to track sargassum conditions and
-predict where it will accumulate next.
+developed in St. Kitts and Nevis. The current system combines satellite imagery
+with environmental and oceanographic data to estimate present-day conditions
+and produce a 48-hour coastal forecast.
 </p>
 
-<h2>Current System</h2>
 <ul>
 <li>Satellite-based sargassum detection and segmentation.</li>
-<li>Roughly 79,500 training samples and 17,100 validation samples processed.</li>
-<li>End-to-end forecasting pipeline is operational.</li>
-<li>Produces present-day sargassum conditions and a 48-hour forecast.</li>
-<li>Forecast output currently covers coastal stretches around St. Kitts and Nevis.</li>
-<li>Combines machine learning with environmental/oceanographic data.</li>
+<li>79,527 training samples and 17,149 validation samples processed.</li>
+<li>Operational end-to-end forecasting pipeline.</li>
+<li>48-hour forecasts across 18 coastal stretches around St. Kitts and Nevis.</li>
+<li>Environmental and oceanographic inputs integrated into the model stack.</li>
+<li>Next: deeper validation and research, low-cost coastal sensing hardware, then autonomous sensing and cleanup systems.</li>
 </ul>
 
-<h2>Where This Is Going</h2>
-<p>
-Sargasso is not just a machine learning experiment. It's being built as an
-evolving environmental technology platform spanning forecasting, sensing,
-research, and eventually hardware and robotics:
-</p>
-<ul>
-<li>Research papers and further model validation are planned.</li>
-<li>Inexpensive physical sensing hardware for coastal monitoring.</li>
-<li>Coastal monitoring devices deployed near affected shorelines.</li>
-<li>Eventually, automated detection and cleanup systems.</li>
-</ul>
-
-<h2>Links</h2>
-<ul>
-<li>Website: <a href="https://sargasso.earth">sargasso.earth</a></li>
-<li>GitHub / research / demo links — coming soon.</li>
-</ul>
-</article>
+<p><a href="https://sargasso.earth">sargasso.earth</a></p>
+</section>
 
 <hr>
 
-<section>
-<h1>Projects</h1>
+<section id="projects">
+<h2>Independent Projects</h2>
 
 <article>
-<h2>eBay Search MCP</h2>
-<p><strong>Role:</strong> Creator &nbsp;|&nbsp; <strong>Type:</strong> Developer tooling / MCP</p>
+<h3>Hardware Procurement MCP</h3>
+<p><strong>Type:</strong> MCP / product-search infrastructure · <a href="https://github.com/Jstarzz/ebay-search-mcp">Source</a></p>
 <p>
-A Model Context Protocol server for searching eBay directly from AI
-assistants. Built for day-to-day use in my own AI workflow, it focuses on
-structured search and results — filtering and deal discovery — rather than
-making the model manually browse listings.
+A read-only Model Context Protocol server for product search across eBay,
+Amazon, AliExpress, and Best Buy. It applies deterministic request filtering,
+routes across official APIs, external providers, and a self-hosted scraper,
+then returns compact normalized results so the model does less browsing and
+carries less context.
 </p>
 </article>
 
 <article>
-<h2>Take My Load</h2>
-<p><strong>Role:</strong> Creator &nbsp;|&nbsp; <strong>Type:</strong> Distributed systems / load testing</p>
+<h3>Slop Obliterator</h3>
+<p><strong>Type:</strong> AI developer tooling · <a href="https://github.com/Jstarzz/slop-obliterator">Source</a></p>
 <p>
-An experimental distributed load-testing system for large-scale HTTP
-workload generation.
-</p>
-<ul>
-<li>Designed around very high concurrency and throughput.</li>
-<li>Target architecture supports distributed workers rather than one machine doing everything.</li>
-<li>Exploring Go, Rust, and C where appropriate for low overhead and high performance.</li>
-<li>Infrastructure automation and multi-node deployment are part of the design.</li>
-</ul>
-</article>
-
-<article>
-<h2>SkillShop</h2>
-<p><strong>Role:</strong> Creator &nbsp;|&nbsp; <strong>Type:</strong> AI developer tooling</p>
-<p>
-A marketplace and distribution system for reusable AI agent skills and
-specialized agents. Designed to make AI capabilities modular and
-composable — installing collections of skills and agents into a workflow
-instead of relying on huge monolithic prompts.
+A Claude Code / Cowork plugin for stopping AI-generated UI, prose, and code
+from collapsing into the same defaults. It combines deterministic rendered
+audits with focused <code>/shape</code>, <code>/deslop</code>, and
+<code>/ship</code> workflows, while keeping heavier Figma and Playwright
+tooling opt-in.
 </p>
 </article>
 
 <article>
-<h2>Commerce Search Infrastructure</h2>
-<p><strong>Role:</strong> Creator &nbsp;|&nbsp; <strong>Type:</strong> Data infrastructure / AI tooling</p>
+<h3>SkillShop</h3>
+<p><strong>Type:</strong> AI developer tooling · <a href="https://github.com/Jstarzz/skillshop">Source</a></p>
 <p>
-A scraping and provider-routing system for product search across
-marketplaces such as Amazon, AliExpress, and eBay. Uses multiple data
-providers with fallbacks, including self-hosted scraping when external
-providers are unavailable. Deterministic filtering happens before results
-reach the model, so AI shopping tools don't have to handle every retrieval
-step themselves.
+A low-context engineering playbook marketplace for coding agents. The current
+library contains 157 specialist playbooks across 10 categories, but exposes
+only four plugin skills; an automatic router loads the smallest useful set of
+playbooks for the task instead of dumping the whole catalog into model context.
 </p>
 </article>
 
 <article>
-<h2>Slop Obliterator</h2>
-<p><strong>Role:</strong> Creator &nbsp;|&nbsp; <strong>Type:</strong> Internal developer tooling</p>
+<h3>web-scraper</h3>
+<p><strong>Type:</strong> Distributed data infrastructure · <a href="https://github.com/Jstarzz/web-scraper">Source</a></p>
 <p>
-A tool used to review and clean up low-quality AI-generated code and work.
-Used heavily in my own development workflow to catch weak implementations,
-unnecessary complexity, and sloppy patterns in AI-generated output.
+A self-hosted procurement scraper for Amazon, AliExpress, and eBay. It uses a
+Go API, PostgreSQL-backed distributed job queue, horizontally scalable workers,
+and an HTTP-first extraction path with Chromium fallback when required.
+</p>
+</article>
+
+<article>
+<h3>Take My Load</h3>
+<p><strong>Type:</strong> Distributed systems / performance testing · <a href="https://github.com/Jstarzz/take-my-load">Source</a></p>
+<p>
+A distributed load-generation and performance-testing platform in development,
+designed around a Go control plane and worker agent, a Rust high-throughput
+traffic engine, Kubernetes/k3s orchestration, and pluggable load engines for
+realistic user flows and raw throughput testing.
 </p>
 </article>
 
@@ -126,27 +119,27 @@ unnecessary complexity, and sloppy patterns in AI-generated output.
 
 <hr>
 
-<section>
-<h1>Selected Contributions</h1>
-<p>Systems I contributed to or built for others — not my own products.</p>
+<section id="contributions">
+<h2>Selected Contributions</h2>
+<p>Systems I contributed to or built for others — not products I own.</p>
 
 <article>
-<h2>NDHIS AI</h2>
-<p><strong>Role:</strong> Developer / system builder &nbsp;|&nbsp; Development work for NDHIS</p>
+<h3>NDHIS AI</h3>
+<p><strong>Role:</strong> Developer / system builder</p>
 <p>
-Built significant parts of the AI system used within NDHIS, including
-local and private model deployment — AI infrastructure designed to operate
-without sending sensitive workloads to public cloud models. Work has also
-included backend and infrastructure integration, serving multiple local
-models, and building supporting services.
+Built significant parts of the AI system used within NDHIS, including local
+and private model deployment, model serving, backend and infrastructure
+integration, and supporting services. This work was built for NDHIS and is not
+a personal product.
 </p>
 </article>
 
 <article>
-<h2>ASPIRE</h2>
+<h3>ASPIRE</h3>
 <p><strong>Role:</strong> Backend contributor</p>
 <p>
-Contributed backend development to the ASPIRE platform.
+Contributed backend development to the ASPIRE platform. ASPIRE is not a
+personal project.
 </p>
 </article>
 
@@ -157,7 +150,10 @@ Contributed backend development to the ASPIRE platform.
 <hr>
 
 <footer>
-<p>Last updated: 2026-09-18</p>
+<p>
+<a href="https://github.com/Jstarzz/runs-on">Source for this page</a> ·
+Last updated: 2026-09-18
+</p>
 </footer>
 
 </body>
